@@ -12,7 +12,7 @@
 <h1><%=session.getAttribute("message")%></h1>
 <form action="LoginServlet" method="post">
  First name:<br/>
- <input type="text" name="first_name">
+ <input type="text" name="userid">
  <br/>
  Password:<br/>
  <input type="password" name="password">

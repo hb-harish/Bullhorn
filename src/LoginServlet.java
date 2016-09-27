@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import UserCheck.User;
+import customTools.DbUser;
+import model.Bhuser;
 
 /**
  * Servlet implementation class LoginServlet
@@ -42,18 +44,19 @@ public class LoginServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		String message1 = request.getParameter("first_name");
-		String message2 = request.getParameter("password");
+		String useremail = request.getParameter("userid");
+		String userpassword = request.getParameter("password");
 	
-		User u = new User();
-		u.setName(message1);
-		u.setPassword(message2);
+//		User u = new User();
+//		u.setName(message1);
+//		u.setPassword(message2);
+		Bhuser user = null;
 		String nextURL ="";
 		HttpSession session = request.getSession();
-		if (u.isvaliduser())
+		if (DbUser.isValidUser(useremail, userpassword))
 		{
-			
-			session.setAttribute("user", u);
+			user = DbUser.getUserByEmail(useremail);
+			session.setAttribute("user", user);
 			nextURL = "/Home.jsp";
 		}
 		else
