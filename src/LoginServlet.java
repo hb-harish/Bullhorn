@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -51,12 +52,15 @@ public class LoginServlet extends HttpServlet {
 //		u.setName(message1);
 //		u.setPassword(message2);
 		Bhuser user = null;
+		List <model.Bhpost> posts = null;
 		String nextURL ="";
 		HttpSession session = request.getSession();
 		if (DbUser.isValidUser(useremail, userpassword))
 		{
+			posts = DbUtilities.bhPost();
 			user = DbUser.getUserByEmail(useremail);
 			session.setAttribute("user", user);
+			session.setAttribute("posts", posts);
 			nextURL = "/Home.jsp";
 		}
 		else
