@@ -22,16 +22,36 @@ function listTags()
  document.write(tags);
 }// -->
 </script>
-<link REL="StyleSheet" TYPE="text/css" HREF="Format.css"> 
+<jsp:include page="Bootstrap.jsp"></jsp:include>
 </head>
 <body onload ="Hello()">
-<center>
-<h1>This is Bullhorn press button to continue</h1>
+<jsp:include page="Navbar.jsp"></jsp:include>
+<Center>
+<h1>This is Bullhorn please accept terms of agreement to continue</h1>
+</Center>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum dolor non eros convallis luctus. Vestibulum ullamcorper urna enim, non scelerisque nisl maximus consectetur. Morbi porttitor blandit tellus eu aliquet. Fusce suscipit accumsan accumsan. Proin nec sollicitudin nisl, vitae finibus tellus. Vestibulum gravida, turpis at pulvinar pretium, elit diam tincidunt elit, luctus gravida felis lorem consectetur sem. Donec nec volutpat ligula. Nunc lobortis sed metus in porttitor. Suspendisse pellentesque est vel urna porttitor viverra. Proin volutpat est quis mi auctor hendrerit. Nunc non nisi dignissim, vulputate tortor quis, dictum purus. Donec et purus et lacus aliquam rutrum id vitae nisi. Nunc id nisi suscipit, interdum sapien a, cursus ligula. Pellentesque imperdiet fermentum lorem, nec ultricies lorem interdum at. Nam nec nibh semper, volutpat sapien quis, molestie nulla.
+</p>
+<p>
+Integer ultricies ligula nec ante commodo, eu pretium justo venenatis. In semper nec nunc quis sagittis. Sed vitae felis sit amet tellus dapibus luctus tristique id diam. Integer nec ornare augue. Maecenas nec ante at lectus pellentesque scelerisque. Nam porta sagittis feugiat. Phasellus dapibus eget sem sit amet gravida. Curabitur efficitur elit arcu. Vivamus mattis convallis mauris eu vestibulum. Morbi interdum tincidunt augue vitae varius. In ullamcorper condimentum arcu vitae elementum. Nullam vitae ornare neque, ut pretium ligula. Ut et cursus ligula, vel faucibus dui.
+</p>
+<p>
+Nam sagittis tortor et elementum hendrerit. Morbi a elementum nunc. Donec ornare consectetur purus, a posuere nibh egestas viverra. Nullam vestibulum efficitur nulla a tristique. Cras pharetra dignissim ex, in consequat elit ullamcorper non. In porta ligula risus, ac rhoncus velit ornare tristique. Integer egestas dui massa, non suscipit sapien vestibulum ut. Donec ac mauris urna. Aliquam quis condimentum tortor. Phasellus libero sapien, commodo vitae est nec, sollicitudin tempor tortor. Ut pretium faucibus nisl, quis rutrum magna congue in. Vivamus pharetra orci purus, eget lobortis sapien hendrerit nec.
+</p>
+<p>
+Phasellus ut congue ante, eget molestie sapien. Donec at turpis vel arcu ultricies faucibus. Praesent eleifend nisi lacus, sit amet tincidunt felis vehicula quis. Nam tincidunt lobortis lorem quis viverra. Morbi sed efficitur nisi. Vivamus eget pulvinar lorem, et mollis libero. Nam eu convallis nibh. Sed scelerisque porta urna vitae dignissim. Quisque quis tellus ullamcorper, suscipit urna et, facilisis felis. Mauris sagittis facilisis ipsum, ac commodo urna scelerisque ut. Pellentesque molestie dui dui, a porttitor nisi tincidunt at.
+</p>
+<p>
+Proin et ornare magna, vitae gravida elit. Integer eleifend, mi at efficitur volutpat, nulla mauris volutpat sem, a convallis arcu tellus eget nisl. Cras porttitor lorem id metus vestibulum vestibulum. Sed dictum lacinia justo, ut condimentum est euismod ac. Proin maximus nisi velit, non tincidunt erat lacinia consectetur. Etiam et vulputate leo. Donec accumsan, nulla ac porta efficitur, ex felis aliquet nunc, et tincidunt tortor mi sed elit. 
+</p>
+<Center>
 <form action="Continue" method="post">
-<input type="submit" value="Continue" id="submit">
+<input type="submit" value="Accept" id="submit">
+<Center>
 </form>
 <br/>
-<button onclick="listTags()">List my Tags</button>
-</center>
+
+<!--<button onclick="listTags()">List my Tags</button>-->
+
 </body>
 </html>
