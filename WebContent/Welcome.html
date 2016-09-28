@@ -2,14 +2,36 @@
 <html>
 <head>
 <title>Welcome to Bullhorn</title>
+<script language="JavaScript">
+<!--
+function Hello()
+ {
+ alert("Hello welcome to Bullhorn")
+ }//-->
+<!--
+function listTags()
+{
+ var tag, tags;
+ // or you can use var allElem=document.all; and loop on it
+ tags = "The tags in the page are:"
+ for(i = 0; i < document.all.length; i++)
+ {
+   tag = document.all(i).tagName;
+   tags = tags + "<br/>" + tag;
+ }
+ document.write(tags);
+}// -->
+</script>
 <link REL="StyleSheet" TYPE="text/css" HREF="Format.css"> 
 </head>
-<body>
+<body onload ="Hello()">
 <center>
 <h1>This is Bullhorn press button to continue</h1>
 <form action="Continue" method="post">
 <input type="submit" value="Continue" id="submit">
 </form>
+<br/>
+<button onclick="listTags()">List my Tags</button>
 </center>
 </body>
 </html>
