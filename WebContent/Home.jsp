@@ -40,7 +40,7 @@ function validate(form) {
 			<li>Welcome <%= u.getUsername()%>
 			</li>
 		</ul>
-		<form role="form" action="Newsfeed.jsp" method="post"
+		<form role="form" action="HomeServlet" method="post"
 			onsubmit="return validate(this);">
 			<div class="form-group">
 				<label for="post">Create New Post (141 char):</label>
