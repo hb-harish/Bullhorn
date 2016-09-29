@@ -40,18 +40,18 @@ function validate(form) {
 			<li>Welcome <%= u.getUsername()%>
 			</li>
 		</ul>
-		<form role="form" action="HomeServlet" method="post"
+		<form role="form" action="FeedServlet" method="post"
 			onsubmit="return validate(this);">
 			<div class="form-group">
-				<label for="post">Create New Post (300 char):</label>
+				<label for="post">Please tell us what you think (300 char):</label>
 				<br/>
 				<textarea name="posttext" id="posttext" class="form-control"
-					rows="2" placeholder="Please give some feedback" maxlength="300"></textarea>
+					rows="2" placeholder="Write feedback here" rows="5" cols="65" maxlength="300"></textarea>
 
 				<div id="textarea_feedback"></div>
 			</div>
 			<div class="form-group">
-				<input type="submit" value="Submit" id="submit" /> <input
+				<input type="submit" value="Send Feedback" id="submit" /> <input
 					type="reset" value="Clear" />
 			</div>
 		</form>

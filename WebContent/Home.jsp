@@ -46,7 +46,7 @@ function validate(form) {
 				<label for="post">Create New Post (141 char):</label>
 				<br/>
 				<textarea name="posttext" id="posttext" class="form-control"
-					rows="2" placeholder="Express yourself!" maxlength="141"></textarea>
+					 placeholder="Express yourself!" rows="4" cols="40" maxlength="141"></textarea>
 
 				<div id="textarea_feedback"></div>
 			</div>
